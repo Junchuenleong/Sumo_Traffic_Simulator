@@ -1,0 +1,26 @@
+# Core RL stack
+stable-baselines3>=2.2.0
+sumo-rl>=1.4.5
+supersuit>=3.9.0
+pettingzoo>=1.24.0
+gymnasium>=0.28.0
+
+# Deep learning backend (CPU is fine for this project's net sizes)
+torch>=2.0.0
+
+# SUMO Python bindings — these ship WITH SUMO. Do NOT pip-install them;
+# they are imported from $SUMO_HOME/tools by sumo_setup.py.
+# traci
+# sumolib
+
+# Numerics / utilities
+numpy>=1.24.0
+
+# Training monitoring (optional but used by train_ppo.py's tensorboard_log)
+tensorboard>=2.13.0
+
+# Progress bars (used by PPO.learn(progress_bar=True))
+tqdm>=4.65.0
+rich>=13.0.0
+
+# For evaluate.py's XML parsing — stdlib only, nothing to install.

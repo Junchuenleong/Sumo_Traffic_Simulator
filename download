@@ -1,0 +1,58 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Project-specific: simulator outputs ---
+# Regenerated deterministically from generate_scenarios.py
+scenarios/*.rou.xml
+scenarios/*.rou.alt.xml
+
+# Per-run SUMO outputs — huge and always regenerated
+outputs/
+
+# TensorBoard logs
+**/tb/
+**/runs/
+
+# --- Models ---
+# Gitignore all checkpoints by default. If you want to ship a pretrained
+# model, remove the lines below OR negate specific paths with !.
+models/
+# Example of selective commit:
+# !models/best/
+# !models/best/best_model.zip
+# !models/vecnormalize.pkl
+
+# --- Large binaries that should not be in git ---
+*.zip
+*.tar.gz
+*.pkl
+
+# --- Docs / authoring intermediate ---
+~$*.docx
+~$*.xlsx
+*.aux
+*.log
+
+# --- Local environment hacks ---
+.env
+.env.local
+*.local.py
