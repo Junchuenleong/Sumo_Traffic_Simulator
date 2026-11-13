@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-04-25 18:04:52.214602 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="D:\Coding_stuff\DIA\grid\networks\grid.net.xml"/>
+    <additional-files value="D:\Coding_stuff\DIA\grid\scenarios\emv_types.add.xml"/>
+    <route-file value="D:\Coding_stuff\DIA\grid\scenarios\emv.rou.xml"/>
+    <prefix value="emv_"/>
+    <trip-attributes value="type=&quot;emergency&quot; departSpeed=&quot;max&quot;"/>
+    <fringe-factor value="100"/>
+    <seed value="2"/>
+    <begin value="300.0"/>
+    <end value="3300.0"/>
+    <period value="600.0"/>
+</configuration>
+-->
+
+<!-- generated on 2026-04-25T18:04:52.152280+08:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="D:\Coding_stuff\DIA\grid\networks\grid.net.xml"/>
+        <additional-files value="D:\Coding_stuff\DIA\grid\scenarios\emv_types.add.xml"/>
+        <route-files value="trips.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="D:\Coding_stuff\DIA\grid\scenarios\emv.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="300.0"/>
+        <end value="3300.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="emergency" maxSpeed="25.00" speedFactor="1.30" vClass="emergency" guiShape="emergency" color="red" accel="2.6" decel="4.5"/>
+    <vehicle id="emv_0" type="emergency" depart="300.00" departSpeed="max">
+        <route edges="D2D3"/>
+    </vehicle>
+    <vehicle id="emv_1" type="emergency" depart="900.00" departSpeed="max">
+        <route edges="A1A0 A0B0 B0B1 B1B2 B2A2 A2A1 A1B1"/>
+    </vehicle>
+    <vehicle id="emv_2" type="emergency" depart="1500.00" departSpeed="max">
+        <route edges="D1C1 C1C2 C2C3 C3B3"/>
+    </vehicle>
+    <vehicle id="emv_3" type="emergency" depart="2100.00" departSpeed="max">
+        <route edges="C2C1 C1B1 B1B0"/>
+    </vehicle>
+    <vehicle id="emv_4" type="emergency" depart="2700.00" departSpeed="max">
+        <route edges="C1C2"/>
+    </vehicle>
+</routes>
